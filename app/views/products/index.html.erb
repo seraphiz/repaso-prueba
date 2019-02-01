@@ -1,0 +1,36 @@
+<br>
+<h1>SOY EL INDEX</h1>
+
+<%= render 'products/form' %>
+
+
+
+<br>
+<table class="table">
+
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Description</th>
+      <th>Image</th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @products.each do |producto| %>
+    <tr>
+    <td><%= producto.name %></td>
+    <td><%= producto.price %></td>
+    <td><%= producto.description %></td>
+    <td><%= image_tag(producto.image, size: '40') %></td>
+    <td><%= link_to 'Favourite', favourite_product_path(producto), method: :patch %></td>
+    <td><%= link_to 'Edit', edit_product_path(producto) %></td>
+    <td><button type="button" class="btn btn-danger"><%= link_to 'Delete?', product_path(producto), method: :delete %></button></td>
+    </tr>
+    
+  <% end %>
+    
+  </tbody>
+
+</table>

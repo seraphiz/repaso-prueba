@@ -1,0 +1,10 @@
+<h1>OE OE SOY EL SHOEW!</h1>
+
+Name:<%= @product.name %> <br>
+Price:<%= @product.price %> <br>
+Description:<%= @product.description %> <br>
+It's favourite? <%= @product.favourite %> <br>
+<%= link_to 'Back', root_path %>
+
+<br>
+<%= image_tag(@product.image, size: '500') %>

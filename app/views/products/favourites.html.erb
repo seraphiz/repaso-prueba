@@ -1,0 +1,27 @@
+<h1>SOY LOS FAVORITOS</h1>
+
+<table class="table">
+
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Description</th>
+      <th>Image</th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @products.each do |producto| %>
+    <tr>
+    <td><%= producto.name %></td>
+    <td><%= producto.price %></td>
+    <td><%= producto.description %></td>
+    <td><%= image_tag(producto.image, size: '40') %></td>
+    </tr>
+    
+  <% end %>
+    
+  </tbody>
+
+</table>
